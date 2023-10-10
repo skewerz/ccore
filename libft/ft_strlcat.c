@@ -1,27 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 12:09:09 by kalturan          #+#    #+#             */
-/*   Updated: 2023/10/10 17:08:18 by kalturan         ###   ########.fr       */
+/*   Created: 2023/10/10 18:18:05 by kalturan          #+#    #+#             */
+/*   Updated: 2023/10/10 18:18:07 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memset(void *b, int c, size_t len)
-{
-	unsigned char	*tmp;
-
-	tmp = (unsigned char *)b;
-	while (len > 0)
-	{
-		*tmp = (unsigned char )c;
-		tmp++;
-		len--;
-	}
-	return (b);
-}
