@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 14:22:46 by kalturan          #+#    #+#             */
-/*   Updated: 2023/10/11 18:33:45 by kalturan         ###   ########.fr       */
+/*   Created: 2023/10/11 17:49:28 by kalturan          #+#    #+#             */
+/*   Updated: 2023/10/11 17:55:25 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int i)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	while (*s)
+	int		i;
+	int		j;
+	char	*str;
+
+	i = 0;
+	j = 0;
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s1[i])
 	{
-		if (*s == i)
-			return ((char *)s);
-		s++;
+		str[i] = s[i];
+		i++;
 	}
-	if (i == '\0')
-		return ((char *)s);
-	return (0);
+	while (s2[j])
+	{
+		str[i + j] = s2[j];
+		j++;
+	}
+	str[i + j] = '\0';
+	return (str);
 }
