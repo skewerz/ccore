@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 18:18:05 by kalturan          #+#    #+#             */
-/*   Updated: 2023/10/11 14:06:14 by kalturan         ###   ########.fr       */
+/*   Created: 2023/10/11 15:27:19 by kalturan          #+#    #+#             */
+/*   Updated: 2023/10/11 15:36:57 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	j = 0;
-	while (dst[i] && i < size)
-		i++;
-	while (src[j] && (i + j + 1) < size)
+	if (s2 == NULL || s2[0] == '\0')
+		return ((char *)s1);
+	while (s1[i] && i < n)
 	{
-		dst[i + j] = src[j];
-		j++;
+		if (s1[i] == s2[j])
+		{
+			while (s1[i + j] == s2[j] && i + j < n)
+			{
+				if (s2[j + 1] == '\0')
+					return ((char *)s1 + i);
+				j++;
+			}
+			j = 0;
+		}
+		i++;
 	}
-	if (i < size)
-		dst[i + j] = '\0';
-	return (i + ft_strlen(src));
+	return (NULL);
 }
