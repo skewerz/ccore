@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:59:57 by kalturan          #+#    #+#             */
-/*   Updated: 2023/10/11 19:34:44 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/10/12 15:22:08 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 
 size_t	ft_strlen(const char *s)
 {
@@ -38,6 +37,7 @@ char	*ft_strchr(const char *s, int i)
 		return ((char *)s);
 	return (0);
 }
+
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	int				i;
@@ -98,7 +98,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 int	main()
 {
 	char a[] = "bu bir ornek cumledir";
-	char b[] = {' '};
-	char c[] = " bu";
+	char b[] = {'b'};
+	char c[] = "buir";
 	printf("%s \n", ft_strtrim(a, c));
 }
