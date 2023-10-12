@@ -6,14 +6,11 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:59:57 by kalturan          #+#    #+#             */
-/*   Updated: 2023/10/12 15:22:08 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/10/12 18:21:09 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -93,12 +90,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 			ft_strlcpy(str, &s1[i], j - i + 1);
 	}
 	return (str);
-}
-
-int	main()
-{
-	char a[] = "bu bir ornek cumledir";
-	char b[] = {'b'};
-	char c[] = "buir";
-	printf("%s \n", ft_strtrim(a, c));
 }
