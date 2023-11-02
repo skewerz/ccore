@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 15:27:19 by kalturan          #+#    #+#             */
-/*   Updated: 2023/10/11 15:36:57 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/02 22:19:04 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 
 	i = 0;
 	j = 0;
-	if (s2 == NULL || s2[0] == '\0')
+	if (s2[0] == '\0')
 		return ((char *)s1);
 	while (s1[i] && i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 14:29:51 by kalturan          #+#    #+#             */
-/*   Updated: 2023/11/01 18:03:19 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/02 22:05:00 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = ft_strlen(s);
-	if (c == 0)
-		return ((char *)s + i);
+	i = 0;
+	while (s[i])
+		i++;
 	while (i >= 0)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
 		i--;
 	}
-	return (NULL);
+	return (0);
 }

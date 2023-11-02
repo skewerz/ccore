@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:49:28 by kalturan          #+#    #+#             */
-/*   Updated: 2023/10/11 17:55:25 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/02 21:35:02 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	while (s1[i])
 	{
-		str[i] = s[i];
+		str[i] = s1[i];
 		i++;
 	}
 	while (s2[j])
