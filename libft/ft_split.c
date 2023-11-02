@@ -6,20 +6,20 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:58:40 by kalturan          #+#    #+#             */
-/*   Updated: 2023/10/12 15:18:03 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/02 21:25:21 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_space(char to_find, char str)
+static int	ft_is_space(char to_find, char str)
 {
 	if (to_find == str)
 		return (1);
 	return (0);
 }
 
-int	ft_countword(char const *str, char charset)
+static int	ft_countword(char const *str, char charset)
 {
 	int	count;
 
@@ -38,7 +38,7 @@ int	ft_countword(char const *str, char charset)
 	return (count);
 }
 
-int	ft_wordlen(char const *str, char charset)
+static int	ft_wordlen(char const *str, char charset)
 {
 	int	len;
 
