@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:59:57 by kalturan          #+#    #+#             */
-/*   Updated: 2023/11/02 22:28:20 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/03 00:57:38 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	str = 0;
-	if (s1 != 0 || set != 0)
+	if (!(*s1))
+	{
+		str = ft_strdup("");
+		return (str);
+	}
+	if ((s1 && set) || *set)
 	{
 		i = 0;
 		j = ft_strlen(s1);
