@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 21:31:02 by kalturan          #+#    #+#             */
-/*   Updated: 2023/11/09 00:28:52 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/09 00:46:35 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printf(const char *format, ...)
 	count = 0;
 	while (*format)
 	{
-		if (format == '%')
+		if (*format == '%')
 			count += print_format(*(++format), ap);
 		else
 			count += write(1, format, 1);

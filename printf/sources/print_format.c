@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 21:41:49 by kalturan          #+#    #+#             */
-/*   Updated: 2023/11/09 00:29:01 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/09 00:47:54 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	print_format(char s, va_list ap)
 		print_xl(va_arg(ap, unsigned int));
 	else if (s == 'X')
 		print_xc(va_arg(ap, unsigned int));
-	else if (s == %)
-		count += write (1, '%', 1);
+	else if (s == '%')
+		count += write (1, "%", 1);
 	else
 		count += write (1, &s, 1);
 	return (count);
