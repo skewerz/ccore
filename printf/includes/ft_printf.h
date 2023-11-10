@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 00:24:35 by kalturan          #+#    #+#             */
-/*   Updated: 2023/11/09 00:46:49 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/10 21:44:09 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ int				print_xl(unsigned int n);
 int				print_xc(unsigned int n);
 int				print_unsigned(unsigned int n);
 int				print_format(char s, va_list ap);
-int				print_pointer(size_t i);
-
+int				print_pointer(unsigned long int i);
 int				ft_printf(const char *format, ...);
 
 #endif
