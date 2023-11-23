@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 18:20:09 by kalturan          #+#    #+#             */
-/*   Updated: 2023/11/20 18:22:52 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/23 22:09:17 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ char	*ft_get_line(int fd, char *line)
 		read_bytes = read(fd, buffer, BUFFER_SIZE);
 		if (read_bytes == -1)
 		{
+			free(line);
 			free(buffer);
 			return (NULL);
 		}

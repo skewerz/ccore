@@ -6,18 +6,20 @@
 /*   By: kalturan <kalturan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 18:23:28 by kalturan          #+#    #+#             */
-/*   Updated: 2023/11/20 18:23:34 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/23 22:03:16 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 # include <stdlib.h>
-# include <fcntl.h>
 # include <stddef.h>
-# include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
 
 char	*get_next_line(int fd);
 char	*ft_strjoin(char *line, char *buff);

@@ -6,7 +6,7 @@
 /*   By: kalturan <kalturan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 18:19:18 by kalturan          #+#    #+#             */
-/*   Updated: 2023/11/20 18:22:43 by kalturan         ###   ########.fr       */
+/*   Updated: 2023/11/21 17:59:42 by kalturan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,8 @@ char	*ft_strjoin(char *line, char *buff)
 		return (NULL);
 	i = -1;
 	j = 0;
-	if (line)
-		while (line[++i] != '\0')
-			str[i] = line[i];
+	while (line[++i] != '\0')
+		str[i] = line[i];
 	while (buff[j] != '\0')
 		str[i++] = buff[j++];
 	str[ft_strlen(line) + ft_strlen(buff)] = '\0';
